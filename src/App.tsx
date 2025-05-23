@@ -1,9 +1,9 @@
+import MainNavigation from "./router/MainNavigation";
+
 function App() {
 
   return (
-    <>
-      Hello Jeral Sandeeptha
-    </>
+    <MainNavigation />
   )
 }
 
