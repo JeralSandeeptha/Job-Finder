@@ -6,3 +6,15 @@ export type HeroProps = {
     titleTwo?: string,
     description: string,
 }
+
+export type SubTitleProps = {
+    title: string
+}
+
+export type DescriptionProps = {
+    description: string
+}
+
+export type ValidationTextProps = {
+    text: string
+}
