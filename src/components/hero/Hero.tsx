@@ -39,16 +39,11 @@ const Hero = (props: HeroProps) => {
 
       {
         props.isHero && (
-          <div>
-            {
-              props.isHero && (
-                <img src={swan} alt="swan" className=""/>
-              )
-            }
-            <img src={heroBg} alt="hero-bg" className=""/>
-          </div>
+          <img src={swan} alt="swan" className=""/>
         )
       }
+
+      <img src={heroBg} alt="hero-bg" className=""/>
 
     </div>
   );
