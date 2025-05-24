@@ -11,6 +11,10 @@ export type SubTitleProps = {
     title: string
 }
 
+export type TitleProps = {
+    title: string
+}
+
 export type DescriptionProps = {
     description: string
 }
