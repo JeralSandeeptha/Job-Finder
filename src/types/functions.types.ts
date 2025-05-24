@@ -1,5 +1,5 @@
 import type { Dispatch, SetStateAction } from "react"
-import type { Job } from "./interface.types"
+import type { Job, newJob } from "./interface.types"
 
 export type GetAllJobsProps = {
     page: number,
@@ -11,5 +11,5 @@ export type GetAllJobsProps = {
 }
 
 export type CreateNewJobProps = {
-    page: number
+    newJob : newJob
 }
