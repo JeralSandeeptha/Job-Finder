@@ -29,9 +29,9 @@ const Hero = (props: HeroProps) => {
 
       {
         props.isFindJob && (
-          <div>
-            <h1>{props.titleOne}</h1>
-            <h5>{props.description}</h5>
+          <div className="py-[8.5rem] px-[3rem] lg:w-[50%] sm:w-[100%]">
+            <h1 className="font-semibold text-[2.5rem] leading-[1.5rem]">{props.titleOne}</h1>
+            <h5 className="text-[#676767] text-[1.5rem] pt-[1rem]">{props.description}</h5>
             <button>Find Jobs</button>
           </div>
         )
