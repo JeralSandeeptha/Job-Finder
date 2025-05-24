@@ -7,6 +7,7 @@ export type GetAllJobsProps = {
     setPage: Dispatch<SetStateAction<number>>,
     setJobs: Dispatch<SetStateAction<Job[]>>,
     setHasMore: Dispatch<SetStateAction<boolean>>,
+    setLoading: Dispatch<SetStateAction<boolean>>,
 }
 
 export type CreateNewJobProps = {
