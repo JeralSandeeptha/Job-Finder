@@ -3,7 +3,7 @@ import type { DescriptionProps } from "../../types/component.types";
 const Description = (props: DescriptionProps) => {
 
   return (
-    <h5 className="text-[gray] text-xs md:text-sm lg:text-base">{props.description}</h5>
+    <h5 className="text-[#676767] md:text-sm lg:text-[1.2rem] w-[85%] pt-[0.5rem]">{props.description}</h5>
   );
 
 }
