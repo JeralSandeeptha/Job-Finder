@@ -5,72 +5,54 @@
       "title":"UI/UX Engineer | Product Designer",
       "job_type":"Full-Time",
       "location":"Malaysia",
-      "posted_date":"24/05/2025",
+      "posted_date":"24/01/2025",
       "description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
-      "responsibilities":[
-        "It is a long established fact that a reader will be distracted by the readable content of a page",
-        "It is a long established fact that a reader will be distracted by the readable content of a page",
-        "It is a long established fact that a reader will be distracted by the readable content of a page",
-        "It is a long established fact that a reader will be distracted by the readable content of a page",
-        "It is a long established fact that a reader will be distracted by the readable content of a page",
-        "It is a long established fact that a reader will be distracted by the readable content of a page",
-        "It is a long established fact that a reader will be distracted by the readable content of a page"
-      ],
-      "posted_by":"Tech Labs (Pvt) Ltd",
-      "required_skills": [
-        "Figma",
-        "React",
-        "Next",
-        "Git Version Controller"
-      ]
+      "posted_by":"Tech Labs (Pvt) Ltd"
     },
     {
       "id":"2",
       "title":"UI/UX Engineer | Product Designer",
       "job_type":"Full-Time",
       "location":"Malaysia",
-      "posted_date":"24/05/2025",
+      "posted_date":"24/02/2025",
       "description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
-      "responsibilities":[
-        "It is a long established fact that a reader will be distracted by the readable content of a page",
-        "It is a long established fact that a reader will be distracted by the readable content of a page",
-        "It is a long established fact that a reader will be distracted by the readable content of a page",
-        "It is a long established fact that a reader will be distracted by the readable content of a page",
-        "It is a long established fact that a reader will be distracted by the readable content of a page",
-        "It is a long established fact that a reader will be distracted by the readable content of a page",
-        "It is a long established fact that a reader will be distracted by the readable content of a page"
-      ],
-      "posted_by":"Tech Labs (Pvt) Ltd",
-      "required_skills": [
-        "Figma",
-        "React",
-        "Next",
-        "Git Version Controller"
-      ]
+      "posted_by":"Tech Labs (Pvt) Ltd"
     },
     {
       "id":"3",
       "title":"UI/UX Engineer | Product Designer",
       "job_type":"Full-Time",
       "location":"Malaysia",
+      "posted_date":"24/03/2025",
+      "description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
+      "posted_by":"Tech Labs (Pvt) Ltd"
+    },
+    {
+      "id":"4",
+      "title":"UI/UX Engineer | Product Designer",
+      "job_type":"Full-Time",
+      "location":"Malaysia",
+      "posted_date":"24/04/2025",
+      "description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
+      "posted_by":"Tech Labs (Pvt) Ltd"
+    },
+    {
+      "id":"5",
+      "title":"UI/UX Engineer | Product Designer",
+      "job_type":"Full-Time",
+      "location":"Malaysia",
       "posted_date":"24/05/2025",
       "description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
-      "responsibilities":[
-        "It is a long established fact that a reader will be distracted by the readable content of a page",
-        "It is a long established fact that a reader will be distracted by the readable content of a page",
-        "It is a long established fact that a reader will be distracted by the readable content of a page",
-        "It is a long established fact that a reader will be distracted by the readable content of a page",
-        "It is a long established fact that a reader will be distracted by the readable content of a page",
-        "It is a long established fact that a reader will be distracted by the readable content of a page",
-        "It is a long established fact that a reader will be distracted by the readable content of a page"
-      ],
-      "posted_by":"Tech Labs (Pvt) Ltd",
-      "required_skills": [
-        "Figma",
-        "React",
-        "Next",
-        "Git Version Controller"
-      ]
+      "posted_by":"Tech Labs (Pvt) Ltd"
+    },
+    {
+      "id":"6",
+      "title":"UI/UX Engineer | Product Designer",
+      "job_type":"Full-Time",
+      "location":"Malaysia",
+      "posted_date":"24/06/2025",
+      "description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
+      "posted_by":"Tech Labs (Pvt) Ltd"
     }
   ]
 }
