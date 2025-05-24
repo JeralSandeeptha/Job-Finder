@@ -6,11 +6,11 @@ import JobDetailPage from "../pages/job-detail-page/JobDetailPage";
 const MainNavigation = () => {
   return (
     <BrowserRouter basename="/">
-        <Routes>
-            <Route path="/" Component={JobListingPage}/>
-            <Route path="/add/job" Component={AddJobPage}/>
-            <Route path="/job/:jobId" Component={JobDetailPage}/>
-        </Routes>
+      <Routes>
+        <Route path="/" Component={JobListingPage}/>
+        <Route path="/add/job" Component={AddJobPage}/>
+        <Route path="/job/:jobId" Component={JobDetailPage}/>
+      </Routes>
     </BrowserRouter>
   );
 }
