@@ -4,7 +4,7 @@ const SearchBar = () => {
   return (
     <div>
 
-      <div>
+      <div>                               
         <Search />
         <h5>search a job or keywork</h5>
       </div>
