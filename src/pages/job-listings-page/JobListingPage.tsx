@@ -68,7 +68,6 @@ const JobListingPage = () => {
           </div>
         ))}
         {!hasMore && <p>No more jobs</p>}
-        <button onClick={changePage}>changePage</button>
       </div>
     </>
   );
