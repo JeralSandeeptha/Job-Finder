@@ -16,6 +16,7 @@ import Spinner from "../spinner/Spinner";
 const AddJobForm = () => {
 
     const [title, setTitle] = useState<string>('');
+    const [jobType, setJobType] = useState<string>('');
     const [company, setCompany] = useState<string>('');
     const [location, setLocation] = useState<string>('');
     const [description, setDescription] = useState<string>('');
@@ -37,7 +38,8 @@ const AddJobForm = () => {
             company: trimmedCompany,
             location: trimmedLocation,
             description: trimmedDescription,
-            setErrors: setErrors
+            setErrors: setErrors,
+            jobType: jobType
         });
 
         if (isValid) {
@@ -46,7 +48,7 @@ const AddJobForm = () => {
                 company: trimmedCompany,
                 location: trimmedLocation,
                 description: trimmedDescription,
-                job_type: "Full-Time",
+                job_type: jobType,
                 posted_date: date,
                 posted_by: "Tech Labs (Pvt) Ltd"
             };
@@ -61,7 +63,7 @@ const AddJobForm = () => {
                 setCompany: setCompany,
                 setDescription: setDescription,
                 setLocation: setLocation,
-                setTitle: setTitle
+                setTitle: setTitle,
             });
         } else {
             console.log('Please enter the correct details!');
@@ -110,7 +112,7 @@ const AddJobForm = () => {
                         <SubTitle title="Job Title"/>
                         <Description description="Job title must be describe at least one job"/>
                     </div>
-                    <div className="lg:py-[2rem] pb-[3rem] border-b-[3px] border-b-[#CDE4C2] md:py-[1rem]">
+                    <div className="lg:py-[3rem] pb-[3rem] border-b-[3px] border-b-[#CDE4C2] md:py-[1rem]">
                         <input onChange={(e) => setTitle(e.target.value)} value={title} className="md:ml-[30px] mb-[5px] w-full rounded-[30px] outline-none text-[gray] text-sm border-[#DADADA] border-[2px] px-[1.5rem] py-[0.7rem] md:w-[300px] rounded-full" placeholder="e.g. Software Engineer"/>
                         {
                             errors.title && (<ValidationText text="Title is required"/>)
@@ -130,6 +132,24 @@ const AddJobForm = () => {
                         }
                     </div>
                 </div>                                  
+                
+                <div className="mb-[20px] gap-[20px] w-full grid md:grid-cols-[1fr_2fr]">
+                    <div className="md:py-[20px]">
+                        <SubTitle title="Job Type"/>
+                        <Description description="Select Job Type"/>
+                    </div>
+                    <div className="py-[1rem] pb-[3rem] border-b-[3px] border-b-[#CDE4C2]">
+                        <select onChange={(e) => setJobType(e.target.value)} value={jobType} name="jobType" id="jobType" className="appearance-none md:ml-[30px] mb-[5px] w-full rounded-[30px] outline-none text-[gray] text-sm border-[#DADADA] border-[2px] px-[1.5rem] py-[0.7rem] py-[10px] md:w-[300px] rounded-full">
+                            <option>Select Job Type</option>
+                            <option>Full-Time</option>
+                            <option>Part-Time</option>
+                            <option>Freelancer</option>
+                        </select>
+                        {
+                            errors.jobType && (<ValidationText text="Job Type is required"/>)
+                        }
+                    </div>
+                </div>      
                 
                 <div className="mb-[20px] gap-[20px] w-full grid md:grid-cols-[1fr_2fr]">
                     <div className="md:py-[20px]">
