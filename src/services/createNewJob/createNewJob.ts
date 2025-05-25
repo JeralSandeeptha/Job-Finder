@@ -8,6 +8,10 @@ const createNewJob = async (props: CreateNewJobProps) => {
         const res = await axios.post(`${baseURL}/jobs`, props.newJob);
         console.log(res.data);
         props.setIsSuccess(true);
+        props.setTitle('');
+        props.setCompany('');
+        props.setLocation('');
+        props.setDescription('');
         setTimeout(() => {
             props.setIsLoading(false);
             props.setIsSuccess(false);
