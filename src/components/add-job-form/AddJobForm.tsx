@@ -39,7 +39,7 @@ const AddJobForm = () => {
                         <Description description="Company must be describe at least one company"/>
                     </div>
                     <div className="py-[1rem] pb-[3rem] border-b-[3px] border-b-[#CDE4C2]">
-                        <input onChange={(e) => setCompany(e.target.value)} value={company} className="md:ml-[30px] mb-[5px] w-full rounded-[30px] outline-none text-[gray] text-sm border-[#DADADA] border-[2px] px-[1.5rem] py-[0.7rem] md:w-[300px] rounded-full" placeholder="e.g. Software Engineer"/>
+                        <input onChange={(e) => setCompany(e.target.value)} value={company} className="md:ml-[30px] mb-[5px] w-full rounded-[30px] outline-none text-[gray] text-sm border-[#DADADA] border-[2px] px-[1.5rem] py-[0.7rem] md:w-[300px] rounded-full" placeholder="e.g. Tech Labs"/>
                         <ValidationText text="max.80 characters"/>
                     </div>
                 </div>                                  
@@ -50,7 +50,7 @@ const AddJobForm = () => {
                         <Description description="Select at least on location"/>
                     </div>
                     <div className="py-[1rem] pb-[3rem] border-b-[3px] border-b-[#CDE4C2]">
-                        <select onChange={(e) => setLocation(e.target.value)} value={location} name="lcoation" id="select" className="md:ml-[30px] mb-[5px] w-full rounded-[30px] outline-none text-[gray] text-sm border-[#DADADA] border-[2px] px-[1.5rem] py-[0.7rem] py-[10px] md:w-[300px] rounded-full">
+                        <select onChange={(e) => setLocation(e.target.value)} value={location} name="lcoation" id="select" className="appearance-none md:ml-[30px] mb-[5px] w-full rounded-[30px] outline-none text-[gray] text-sm border-[#DADADA] border-[2px] px-[1.5rem] py-[0.7rem] py-[10px] md:w-[300px] rounded-full">
                             <option>Select Location</option>
                             <option>Sri Lanka</option>
                             <option>India</option>
@@ -70,7 +70,7 @@ const AddJobForm = () => {
                     </div>
                 </div>                            
             </div>
-            <div className="action-btn flex justify-end gap-9">
+            <div className="action-btn flex justify-end gap-6">
                 <Link to={''} className="bg-[#00773A] text-[white] text-[1.2rem] py-[0.5rem] px-[2.5rem] rounded-full hover:bg-[linear-gradient(to_left,#009A4B_1%,#35A44C_1%,#57AB4D_16%,#6EAF4E_51%,#9EB84F_76%,#E5C651_100%)] hover:scale-105 transition-all duration-500 ease-in-out">Post this job</Link>
                  <Link to={'/'} className="bg-[#EDF8F2] text-[black] text-[1.2rem] py-[0.5rem] px-[2.5rem] rounded-full hover:bg-[#F8EFD0] hover:scale-105 transition-all duration-500 ease-in-out">Cancel</Link>
             </div>
