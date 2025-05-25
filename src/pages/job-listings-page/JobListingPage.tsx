@@ -86,7 +86,7 @@ const JobListingPage = () => {
             <div className="flex flex-col gap-3 max-h-64 overflow-y-auto pr-2 scrollbar-thumb-[#009A4B] scrollbar-track-[#009A4B]-200">
               {countries.map((country: Country) => {
                 return (
-                  <div className="flex items-center gap-[1rem] pt-[1rem]">
+                  <div key={country.id} className="flex items-center gap-[1rem] pt-[1rem]">
                     <input
                       type="checkbox"
                       name="country"
