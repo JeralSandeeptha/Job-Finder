@@ -1,6 +1,7 @@
 import type { HeroProps } from "../../types/component.types";
 import heroBg from '../../assets/images/hero-graffiti.svg';
 import swan from '../../assets/logos/swan.svg';
+import { Link } from "react-router-dom";
 
 const Hero = (props: HeroProps) => {
   return (
@@ -31,8 +32,8 @@ const Hero = (props: HeroProps) => {
         props.isFindJob && (
           <div className="pt-[8.5rem] pb-[4rem] px-[3rem] lg:w-[50%] sm:w-[100%]">
             <h1 className="font-semibold text-[2.5rem] leading-[1.5rem]">{props.titleOne}</h1>
-            <h5 className="text-[#676767] text-[1.5rem] pt-[1rem]">{props.description}</h5>
-            <button className="md:w-max sm:w-[100%] bg-[linear-gradient(to_right,#009A4B_1%,#35A44C_1%,#57AB4D_16%,#6EAF4E_51%,#9EB84F_76%,#E5C651_100%)] mt-[3rem] py-[0.8rem] lg:px-[4rem] md:px-[2rem] text-[white] rounded-full h-fit text-[1.3rem] md:text[1rem] font-medium hover:bg-[linear-gradient(to_left,#009A4B_1%,#35A44C_1%,#57AB4D_16%,#6EAF4E_51%,#9EB84F_76%,#E5C651_100%)] hover:scale-105 transition-all duration-500 ease-in-out">Find Jobs</button>
+            <h5 className="text-[#676767] text-[1.5rem] pt-[1rem] pb-[2.3rem]">{props.description}</h5>
+            <Link to={'/'} className="md:w-max sm:w-[100%] bg-[linear-gradient(to_right,#009A4B_1%,#35A44C_1%,#57AB4D_16%,#6EAF4E_51%,#9EB84F_76%,#E5C651_100%)] py-[0.8rem] lg:px-[4rem] md:px-[2rem] text-[white] rounded-full h-fit text-[1.3rem] md:text[1rem] font-medium hover:bg-[linear-gradient(to_left,#009A4B_1%,#35A44C_1%,#57AB4D_16%,#6EAF4E_51%,#9EB84F_76%,#E5C651_100%)] hover:scale-105 transition-all duration-500 ease-in-out">Find Jobs</Link>
           </div>
         )
       }
