@@ -1,4 +1,4 @@
-import { MapPin, Search } from "lucide-react";
+import { MapPin, Search, Building2 } from "lucide-react";
 
 const SearchBar = () => {
   return (
@@ -11,8 +11,8 @@ const SearchBar = () => {
 
         <div className="flex">
           <div className="flex items-center gap-3 h-[5rem]">
-            <MapPin className="stroke-[#DDDDDD] lg:w-[30px] lg:h-[30px] md:w-[20px] md:h-[20px]"/>
-            <input className="text-[black] lg:text-[1.3rem] md:text-[1rem] leading-0 focus:outline-none placeholder:text-[#DDDDDD]" type="text" placeholder="country or city"/>
+            <Building2 className="stroke-[#DDDDDD] lg:w-[30px] lg:h-[30px] md:w-[20px] md:h-[20px]"/>
+            <input className="text-[black] lg:text-[1.3rem] md:text-[1rem] leading-0 focus:outline-none placeholder:text-[#DDDDDD]" type="text" placeholder="company name"/>
           </div>
         </div>
       </div>

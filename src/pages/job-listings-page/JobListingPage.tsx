@@ -69,14 +69,14 @@ const JobListingPage = () => {
       />
       <SearchBar />
 
-      <div className="w-full grid grid-cols-[1fr_3fr] gap-6 px-[3rem] ">
-        <div>
-        <div className="p-4 rounded-lg border border-gray-300 shadow-sm w-full max-w-xs h-fit">
-            <h1 className="text-lg font-semibold mb-4">Select by Location</h1>
-            <div className="flex flex-col gap-3 max-h-64 overflow-y-auto pr-2">
+      <div className="w-full grid grid-cols-[1fr_3fr] gap-6 p-[3rem] ">
+        <div className="">
+        <div className="p-[2rem] rounded-[1rem] border-1 border-[#E4E4E4] w-full max-w-xs h-fit">
+            <h1 className="text-[1.5rem] font-semibold mb-4">Location</h1>
+            <div className="flex flex-col gap-3 max-h-64 overflow-y-auto pr-2 scrollbar-thumb-[#009A4B] scrollbar-track-[#009A4B]-200">
               {countries.map((country: Country) => {
                 return (
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-[1rem] pt-[1rem]">
                     <input
                       type="checkbox"
                       name="country"
@@ -87,9 +87,9 @@ const JobListingPage = () => {
                           prev === country.name ? null : country.name
                         )
                       }
-                      className="accent-green-600 w-4 h-4"
+                      className="accent-[#009A4B] w-[30px] h-[30px] border-[#E6E6E6]"
                     />
-                    <label className="flex justify-between w-full text-sm cursor-pointer" htmlFor={country.name}>
+                    <label className="flex justify-between w-full text-[1.2rem] cursor-pointer" htmlFor={country.name}>
                       <h5>{country.name}</h5>
                     </label>
                   </div>
@@ -99,23 +99,23 @@ const JobListingPage = () => {
           </div>
         </div>
 
-        <div>
-          <div>
-            {jobs.length !== 0 && <SubTitle title="Job results found..." />}
-            <h5>Picked based on your preference and selections</h5>
+        <div className="px-[3rem] pl-0">
+          <div className="pb-[2rem]">
+            {jobs.length !== 0 && <h5 className="font-bold text-[2rem]">Job results found ... </h5>}
+            <h5 className="text-[#676767] font-light pt-[0.5rem] text-[1.2rem]">Picked based on your preference and selections</h5>
           </div>
 
           <div>
-            <div className="flex gap-10 items-center justify-end">
+            <div className="flex gap-10 items-center justify-end pb-[1.5rem]">
               <button
-                className="cursor-pointer flex gap-3"
+                className="cursor-pointer flex gap-3 hover:text-[#009A4B]"
                 onClick={handleChangeGrid}
               >
                 <List />
                 <h5>List View</h5>
               </button>
               <button
-                className="cursor-pointer flex gap-3"
+                className="cursor-pointer flex gap-3 hover:text-[#009A4B]"
                 onClick={handleChangeGrid}
               >
                 <Grid2x2 />
@@ -124,7 +124,7 @@ const JobListingPage = () => {
             </div>
 
             <div
-              className="gap-3 grid"
+              className="gap-8 grid"
               style={{
                 gridTemplateColumns: isGrid ? "1fr 1fr 1fr" : "1fr",
               }}
