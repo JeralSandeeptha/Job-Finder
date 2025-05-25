@@ -69,14 +69,14 @@ const JobListingPage = () => {
       />
       <SearchBar />
 
-      <div className="w-full grid grid-cols-[1fr_3fr]">
+      <div className="w-full grid grid-cols-[1fr_3fr] gap-6 px-[3rem] ">
         <div>
-          <div className="w-[100%] border=[gray] h-[300px] overflow-y-scroll">
-            <h1>Select by Location</h1>
-            <div>
+        <div className="p-4 rounded-lg border border-gray-300 shadow-sm w-full max-w-xs h-fit">
+            <h1 className="text-lg font-semibold mb-4">Select by Location</h1>
+            <div className="flex flex-col gap-3 max-h-64 overflow-y-auto pr-2">
               {countries.map((country: Country) => {
                 return (
-                  <div className="flex gap-3">
+                  <div className="flex items-center gap-2">
                     <input
                       type="checkbox"
                       name="country"
@@ -87,8 +87,9 @@ const JobListingPage = () => {
                           prev === country.name ? null : country.name
                         )
                       }
+                      className="accent-green-600 w-4 h-4"
                     />
-                    <label htmlFor={country.name}>
+                    <label className="flex justify-between w-full text-sm cursor-pointer" htmlFor={country.name}>
                       <h5>{country.name}</h5>
                     </label>
                   </div>
