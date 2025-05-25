@@ -37,3 +37,11 @@ export type ValidateFilterFieldsProps = {
     description: string
     setErrors: Dispatch<SetStateAction<{ [key: string]: string }>>
 }
+
+export type SearchJobsProps = {
+    setSearchJobsList: Dispatch<SetStateAction<Job[]>>
+    company?: string,
+    job_type?: string,
+    location?: string,
+    title?: string,
+}

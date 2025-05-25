@@ -6,8 +6,8 @@ import type { Country, Job } from "../../types/interface.types";
 import getAllJobs from "../../services/getAllJobs/getAllJobs";
 import { Grid2x2, List } from "lucide-react";
 import JobCard from "../../components/job-card/JobCard";
-import SubTitle from "../../components/sub-title/SubTitle";
 import { countries } from "../../constants/countries.data";
+import { useNavigate } from "react-router-dom";
 
 const JobListingPage = () => {
   const [jobs, setJobs] = useState<Job[]>([]);
@@ -17,6 +17,16 @@ const JobListingPage = () => {
   const [isGrid, setIsGrid] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [limit] = useState(3);
+  const [title, setTitle] = useState<string>('');
+  const [company, setCompany] = useState<string>('');
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    if(title.trim().length === 0  || company.trim().length === 0) {
+      return null;
+    }
+    navigate(`/search/${title}/${company}`);
+  }
 
   const handleChangeGrid = () => {
     setIsGrid(!isGrid);
@@ -67,7 +77,7 @@ const JobListingPage = () => {
         titleTwo="Dream Jobs"
         description="Browse our latest to view, apply & post to the new jobs today!"
       />
-      <SearchBar />
+      <SearchBar title={title} company={company} setCompany={setCompany} setTitle={setTitle} handleSearch={handleSearch}/>
 
       <div className="w-full grid grid-cols-[1fr_3fr] gap-6 p-[3rem] ">
         <div className="">
