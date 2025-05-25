@@ -58,7 +58,7 @@ const JobDetails = () => {
                      
                 </div>
                 <div className="pt-[2.5rem]">
-                    <button className="text-[black] bg-[#F8EFD0] rounded-full w-max py-[0.5rem] px-[2.5rem] text-[1.2rem] font-medium hover:bg-[#E5C651] hover:scale-105 transition-all duration-500 ease-in-out ">Apply Now</button>
+                    <button className="text-[black] bg-[#F8EFD0] rounded-full w-max py-[0.5rem] px-[2.5rem] text-[1.2rem] font-medium hover:bg-[#E5C651] hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer">Apply Now</button>
                 </div>
                 
             </div>
@@ -69,7 +69,7 @@ const JobDetails = () => {
                     <h5 className="text-[1.3rem] text-[black] font-normal">{job.description}</h5>
                 </div>
                 <div className="w-[] border-2 rounded-[2rem] border-[#D8D8D8] py-[1.8rem] pb-[2rem] px-[1.8rem] h-fit">
-                    <h1 className="font-semibold text-[1.5rem] pb-[2rem]">About this role</h1>
+                    <h1 className="font-semibold text-[1.5rem] pb-[2rem]">About this Job</h1>
                     <div className=" flex flex-col gap-[1rem]">
                         <div className="flex items-center justify-between">
                             <h5 className="w-[15rem] text-[1.2rem] text-[#7B7B7B]">Job Posted</h5>
