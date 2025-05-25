@@ -77,7 +77,7 @@ const JobDetails = () => {
                         </div>
                         <div className="flex items-center justify-between">
                             <h5 className="w-[15rem] text-[1.2rem] text-[#7B7B7B]">Posted By</h5>
-                            <h5 className="font-medium text-[1.2rem]">{job.posted_by}</h5>
+                            <h5 className="font-medium text-[1.2rem]">{job.company}</h5>
                         </div>
                         <div className="flex items-center justify-between">
                             <h5 className="w-[15rem] text-[1.2rem] text-[#7B7B7B]">Job Type</h5>

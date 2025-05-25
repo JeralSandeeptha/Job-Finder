@@ -13,8 +13,8 @@ const JobCard = (props: JobCardProps) => {
             <Bookmark className="absolute right-[1.5rem] top-[2rem] w-[25px] h-[25px]"/>
           </div>
           <div className="pb-[1rem]">
-            <h5>{props.job.company}</h5>
-            <h2 className="font-medium text-[1.3rem] pt-[0.3rem]">{props.job.title}</h2>
+            <h5 className="underline decoration-2">{props.job.company}</h5>
+            <h2 className="font-semibold text-[1.3rem] pt-[0.3rem]">{props.job.title}</h2>
           </div>
           <div className="flex items-center gap-[1.5rem] flex-wrap gap-y-[1rem] pb-[2rem]">
             <div className="flex items-center gap-[0.5rem]">
@@ -46,8 +46,8 @@ const JobCard = (props: JobCardProps) => {
         <img src={jobImage} alt="job-image" className="h-fit"/>
         <div className="flex flex-col">
           <div className="pb-[0.9rem]">
-            <h5>{props.job.company}</h5>
-            <h2 className="font-medium text-[1.2rem] pt-[0.3rem]">{props.job.title}</h2>
+            <h5 className="underline decoration-2">{props.job.company}</h5>
+            <h2 className="font-semibold text-[1.3rem] pt-[0.3rem]">{props.job.title}</h2>
           </div>
           <div className="flex items-center gap-[1.5rem]">
             <div className="flex items-center gap-[0.5rem]">
