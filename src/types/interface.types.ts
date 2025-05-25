@@ -6,6 +6,7 @@ export interface Job{
     posted_date: string,
     description: string,
     posted_by: string,
+    company: string,
 }
 
 export interface newJob{

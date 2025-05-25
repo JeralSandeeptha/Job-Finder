@@ -1,3 +1,5 @@
+import type { Job } from "./interface.types"
+
 export type HeroProps = {
     isHero?: boolean,
     isAddNewJob?: boolean,
@@ -28,4 +30,9 @@ export type AlertProps = {
     isError?: boolean,
     title: string,
     description: string,
+}
+
+export type JobCardProps = {
+    job: Job,
+    isGrid: boolean
 }

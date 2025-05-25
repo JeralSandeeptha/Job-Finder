@@ -6,6 +6,7 @@ const getJob = async (props: GetJobProps) => {
     try {
         const response = await axios.get(`${baseURL}/jobs/${props.jobId}`);
         props.setJob(response.data);
+        console.log(response.data);
     } catch (error) {
         console.log(error);
     }

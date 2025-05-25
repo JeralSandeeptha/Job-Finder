@@ -15,7 +15,8 @@ const JobDetails = () => {
         posted_by: '',
         posted_date: '',
         title: '',
-        id: ''
+        id: '',
+        company: ''
     });
 
     const getDetails = () => {
