@@ -22,3 +22,10 @@ export type DescriptionProps = {
 export type ValidationTextProps = {
     text: string
 }
+
+export type AlertProps = {
+    isSuccess?: boolean,
+    isError?: boolean,
+    title: string,
+    description: string,
+}
