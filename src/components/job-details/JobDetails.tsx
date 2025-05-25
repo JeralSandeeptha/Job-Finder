@@ -71,15 +71,15 @@ const JobDetails = () => {
                 <div className="w-[] border-2 rounded-[2rem] border-[#D8D8D8] py-[1.8rem] pb-[2rem] px-[1.8rem]">
                     <h1 className="font-semibold text-[1.5rem] pb-[2rem]">About this role</h1>
                     <div className=" flex flex-col gap-[1rem]">
-                        <div className="flex items-center">
+                        <div className="flex items-center justify-between">
                             <h5 className="w-[15rem] text-[1.2rem] text-[#7B7B7B]">Job Posted</h5>
                             <h5 className="font-medium text-[1.2rem]">{job.posted_date}</h5>
                         </div>
-                        <div className="flex items-center">
+                        <div className="flex items-center justify-between">
                             <h5 className="w-[15rem] text-[1.2rem] text-[#7B7B7B]">Posted By</h5>
                             <h5 className="font-medium text-[1.2rem]">{job.posted_by}</h5>
                         </div>
-                        <div className="flex items-center">
+                        <div className="flex items-center justify-between">
                             <h5 className="w-[15rem] text-[1.2rem] text-[#7B7B7B]">Job Type</h5>
                             <h5 className="font-medium text-[1.2rem]">{job.job_type}</h5>
                         </div>

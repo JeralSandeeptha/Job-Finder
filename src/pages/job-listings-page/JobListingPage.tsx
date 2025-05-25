@@ -69,9 +69,9 @@ const JobListingPage = () => {
       />
       <SearchBar />
 
-      <div className="w-full grid grid-cols-[1fr_3fr]">
+      <div className="w-full grid grid-cols-[1fr_3fr] py-[3rem]">
         <div>
-          <div className="w-[100%] border=[gray] h-[300px] overflow-y-scroll">
+          <div className="w-[100%] border=[gray] h-[600px] overflow-y-scroll">
             <h1>Select by Location</h1>
             <div>
               {countries.map((country: Country) => {
@@ -98,16 +98,16 @@ const JobListingPage = () => {
           </div>
         </div>
 
-        <div>
-          <div>
-            {jobs.length !== 0 && <SubTitle title="Job results found..." />}
-            <h5>Picked based on your preference and selections</h5>
+        <div className="px-[3rem] pl-0">
+          <div className="pb-[2rem]">
+            {jobs.length !== 0 && <h5 className="font-bold text-[2rem]">Job results found ... </h5>}
+            <h5 className="text-[#676767] font-light pt-[0.5rem] text-[1.2rem]">Picked based on your preference and selections</h5>
           </div>
 
           <div>
-            <div className="flex gap-10 items-center justify-end">
+            <div className="flex gap-10 items-center justify-end pb-[1.5rem]">
               <button
-                className="cursor-pointer flex gap-3"
+                className="cursor-pointer flex gap-3 hover:text"
                 onClick={handleChangeGrid}
               >
                 <List />
@@ -123,7 +123,7 @@ const JobListingPage = () => {
             </div>
 
             <div
-              className="gap-3 grid"
+              className="gap-8 grid"
               style={{
                 gridTemplateColumns: isGrid ? "1fr 1fr 1fr" : "1fr",
               }}
