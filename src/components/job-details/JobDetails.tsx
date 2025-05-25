@@ -30,55 +30,57 @@ const JobDetails = () => {
     }, []);
 
     return (
-        <div>
+        <div className="px-[3rem]">
 
-            <Link to={'/'} className="flex items-center gap-4 text-[#009A4B] pb-[3rem]"><MoveLeft size={20} className="stroke-[#009A4B]" />Back to Jobs</Link>
+            <Link to={'/'} className="flex items-center w-fit gap-4 text-[#009A4B] pb-[3rem]"><MoveLeft size={20} className="stroke-[#009A4B]" />Back to Jobs</Link>
 
-            <div>
-                <div>
-                    <img src={jobImage} alt="job-image" />
-                </div>
-                <div>
-                    <h1>{job.title}</h1>
-                    <div>
-                        <div>
-                            <Circle strokeWidth={3} />
-                            <h5>{job.job_type}</h5>
-                        </div>
-                        <div>
-                            <MapPin />
-                            <h5>{job.location}</h5>
-                        </div>
-                        <div>
-                            <Calendar />
-                            <h5>Posted: {job.posted_date}</h5>
+            <div className="md:flex w-[100%] sm:flex-col md:flex-row items-end border-b-4 border-b-[#F9F9F9] pb-[2rem]">
+                <div className="flex items-center gap-[2rem] w-[100%]">
+                    <img src={jobImage} alt="job-image" className=""/>
+                    <div className="flex flex-col gap-[0.7rem]">
+                        <h1 className="font-bold text-[1.8rem]">{job.title}</h1>
+                        <div className="flex items-center gap-[1.5rem]">
+                            <div className="flex items-center gap-[0.5rem]">
+                                <Circle strokeWidth={0} className="w-[20px] h-[20px] fill-[#009A4B]"/>
+                                <h5 className="text-[#949494]">{job.job_type}</h5>
+                            </div>
+                            <div className="flex items-center gap-[0.5rem]">
+                                <MapPin className="w-[20px] h-[20px] stroke-[#009A4B]"/>
+                                <h5 className="text-[#949494]">{job.location}</h5>
+                            </div>
+                            <div className="flex items-center gap-[0.5rem]">
+                                <Calendar className="w-[20px] h-[20px] stroke-[#009A4B]"/>
+                                <h5 className="text-[#949494]">Posted: {job.posted_date}</h5>
+                            </div>
                         </div>
                     </div>
+                     
                 </div>
-                <div>
-                    <button className="text-[black] bg-[#F8EFD0] rounded-[49px]">Apply Now</button>
+                <div className="pt-[2.5rem]">
+                    <button className="text-[black] bg-[#F8EFD0] rounded-full w-max py-[0.5rem] px-[2.5rem] text-[1.2rem] font-medium hover:bg-[#E5C651] hover:scale-105 transition-all duration-500 ease-in-out ">Apply Now</button>
                 </div>
+                
             </div>
 
-            <div>
-                <div>
-                    <h1>Job Description</h1>
-                    <h5>{job.description}</h5>
+            <div className="md:flex sm:flex-col md:flex-row py-[3rem] flex justify-between">
+                <div className="header-title pb-[3rem]">
+                    <h1 className="text-[1.8rem] font-bold pb-[1rem]">Job Description</h1>
+                    <h5 className="text-[1.3rem] text-[black] font-normal">{job.description}</h5>
                 </div>
-                <div>
-                    <h1>About this role</h1>
-                    <div>
-                        <div>
-                            <h5>Job Posted</h5>
-                            <h5>{job.posted_date}</h5>
+                <div className="w-[] border-2 rounded-[2rem] border-[#D8D8D8] py-[1.8rem] pb-[2rem] px-[1.8rem]">
+                    <h1 className="font-semibold text-[1.5rem] pb-[2rem]">About this role</h1>
+                    <div className=" flex flex-col gap-[1rem]">
+                        <div className="flex items-center">
+                            <h5 className="w-[15rem] text-[1.2rem] text-[#7B7B7B]">Job Posted</h5>
+                            <h5 className="font-medium text-[1.2rem]">{job.posted_date}</h5>
                         </div>
-                        <div>
-                            <h5>Posted By</h5>
-                            <h5>{job.posted_by}</h5>
+                        <div className="flex items-center">
+                            <h5 className="w-[15rem] text-[1.2rem] text-[#7B7B7B]">Posted By</h5>
+                            <h5 className="font-medium text-[1.2rem]">{job.posted_by}</h5>
                         </div>
-                        <div>
-                            <h5>Job Type</h5>
-                            <h5>{job.job_type}</h5>
+                        <div className="flex items-center">
+                            <h5 className="w-[15rem] text-[1.2rem] text-[#7B7B7B]">Job Type</h5>
+                            <h5 className="font-medium text-[1.2rem]">{job.job_type}</h5>
                         </div>
                     </div>
                 </div>
