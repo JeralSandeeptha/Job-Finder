@@ -16,6 +16,10 @@ export type GetAllJobsProps = {
 export type CreateNewJobProps = {
     newJob: newJob,
     navigate: NavigateFunction,
+    setTitle: Dispatch<SetStateAction<string>>,
+    setCompany: Dispatch<SetStateAction<string>>,
+    setLocation: Dispatch<SetStateAction<string>>,
+    setDescription: Dispatch<SetStateAction<string>>,
     setIsLoading: Dispatch<SetStateAction<boolean>>,
     setIsSuccess: Dispatch<SetStateAction<boolean>>,
     setIsError: Dispatch<SetStateAction<boolean>>,

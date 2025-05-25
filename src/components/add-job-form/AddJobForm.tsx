@@ -57,7 +57,11 @@ const AddJobForm = () => {
                 navigate: navigate,
                 setIsError: setIsError,
                 setIsSuccess: setIsSuccess,
-                setIsLoading: setIsLoading
+                setIsLoading: setIsLoading,
+                setCompany: setCompany,
+                setDescription: setDescription,
+                setLocation: setLocation,
+                setTitle: setTitle
             });
         } else {
             console.log('Please enter the correct details!');
