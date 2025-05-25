@@ -40,7 +40,7 @@ const JobDetails = () => {
                     <img src={jobImage} alt="job-image" className=""/>
                     <div className="flex flex-col gap-[0.7rem]">
                         <h1 className="font-bold text-[1.8rem]">{job.title}</h1>
-                        <div className="flex items-center gap-[1.5rem]">
+                        <div className="flex items-center gap-[1.5rem] flex-wrap">
                             <div className="flex items-center gap-[0.5rem]">
                                 <Circle strokeWidth={0} className="w-[20px] h-[20px] fill-[#009A4B]"/>
                                 <h5 className="text-[#949494]">{job.job_type}</h5>
@@ -63,12 +63,12 @@ const JobDetails = () => {
                 
             </div>
 
-            <div className="md:flex sm:flex-col md:flex-row py-[3rem] flex justify-between">
-                <div className="header-title pb-[3rem]">
+            <div className="md:flex flex-col lg:flex-row py-[3rem] flex justify-between">
+                <div className="header-title pb-[3rem] lg:w-[50%] w-[100%]">
                     <h1 className="text-[1.8rem] font-bold pb-[1rem]">Job Description</h1>
                     <h5 className="text-[1.3rem] text-[black] font-normal">{job.description}</h5>
                 </div>
-                <div className="w-[] border-2 rounded-[2rem] border-[#D8D8D8] py-[1.8rem] pb-[2rem] px-[1.8rem]">
+                <div className="w-[] border-2 rounded-[2rem] border-[#D8D8D8] py-[1.8rem] pb-[2rem] px-[1.8rem] h-fit">
                     <h1 className="font-semibold text-[1.5rem] pb-[2rem]">About this role</h1>
                     <div className=" flex flex-col gap-[1rem]">
                         <div className="flex items-center justify-between">
