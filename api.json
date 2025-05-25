@@ -29,6 +29,16 @@
       "job_type": "Part-Time",
       "posted_date": "26/05/2025",
       "posted_by": "Tech Labs (Pvt) Ltd"
+    },
+    {
+      "id": "d2d6",
+      "title": "Architect",
+      "company": "WSO2",
+      "location": "Montenegro",
+      "description": "Running the Project\nYou can follow below instructions for the start the application.\n\nSetup .env File\nCreate a file called .env in the root folder\n\nAdd these env variables to that file\n\nVITE_API_URL=http://localhost:5000\nStart the React Application\nRun the following command to start the React application locally on port 5173:\n\nnpm run dev",
+      "job_type": "Full-Time",
+      "posted_date": "26/05/2025",
+      "posted_by": "Tech Labs (Pvt) Ltd"
     }
   ]
 }
