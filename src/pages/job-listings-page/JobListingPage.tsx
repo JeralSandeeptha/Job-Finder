@@ -1,44 +1,48 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Hero from "../../components/hero/Hero";
 import Navbar from "../../components/navbar/Navbar";
 import SearchBar from "../../components/search-bar/SearchBar";
-import getAllJobs from "../../services/getAllJobs/getAllJobs";
 import type { Job } from "../../types/interface.types";
+import getAllJobs from "../../services/getAllJobs/getAllJobs";
 
 const JobListingPage = () => {
-
-  const [jobs, setJobs] = useState([]);
+  const [jobs, setJobs] = useState<Job[]>([]);
   const [page, setPage] = useState(1);
-  const [hasMore, setHasMore] = useState(true);
   const [loading, setLoading] = useState(false);
-  const observer = useRef();
-  const limit = 3;
+  const [hasMore, setHasMore] = useState(true);
+  const [limit] = useState(3);
+
+  const changePage = () => {
+    setPage((prev) => prev + 1);
+    console.log(page);
+  };
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const handleScroll = () => {
+    if (loading || !hasMore) return;
+
+    if (window.innerHeight + window.scrollY + 100 >= document.documentElement.scrollHeight) {
+      changePage();
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
   useEffect(() => {
     getAllJobs({
-      page: page,
       limit: limit,
-      setPage: setPage,
+      page: page,
+      setHasMore: setHasMore,
       setJobs: setJobs,
-      setHasMore: setHasMore
+      setPage: setPage,
+      setLoading: setLoading,
+      jobs: jobs,
+      loading: loading,
     });
   }, [page]);
-
-  const lastJobElementRef = useCallback(
-    (node) => {
-      if (loading) return;
-      if (observer.current) observer.current.disconnect();
-
-      observer.current = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting && hasMore) {
-          setPage((prevPage) => prevPage + 1);
-        }
-      });
-
-      if (node) observer.current.observe(node);
-    },
-    [loading, hasMore]
-  );
 
   return (
     <>
@@ -51,13 +55,19 @@ const JobListingPage = () => {
       />
       <SearchBar />
       <div>
-        <h2>Job Listings</h2>
-        {jobs.map((job, index) => (
-          <div key={`${job.id}` + index} style={{ border: '1px solid #ccc', margin: '10px', padding: '10px' }}>
-            <h4>{job.id}</h4>
+        {jobs.map((post) => (
+          <div
+            key={post.id}
+            style={{
+              padding: "10px",
+              border: "1px solid gray",
+              margin: "10px 0",
+            }}
+          >
+            <h4>{post.id}</h4>
           </div>
         ))}
-        {!hasMore && <p>No more jobs to load.</p>}
+        {!hasMore && <p>No more jobs</p>}
       </div>
     </>
   );

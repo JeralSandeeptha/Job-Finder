@@ -7,3 +7,13 @@ export interface Job{
     description: string,
     posted_by: string,
 }
+
+export interface newJob{
+    title : string,
+    company : string,
+    location : string,
+    description : string
+    job_type : string,
+    posted_date : string,
+    posted_by : string
+}
