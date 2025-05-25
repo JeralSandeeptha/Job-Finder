@@ -1,54 +1,121 @@
-# React + TypeScript + Vite
+# Job Finder Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source code for a React application that integrates with a JSON Server for managing data. The project is designed to run locally, providing a simple frontend and backend setup for demonstration purposes.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Running the Project](#running-the-project)
+  - [Setup .env File](#setup-env-file)
+  - [Start the React Application](#start-the-react-application)
+  - [Start the JSON Server](#start-the-json-server)
+- [Project Structure](#project-structure)
+- [Available Scripts](#available-scripts)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+Follow the instructions below to set up and run the project locally.
+
+### Prerequisites
+
+Ensure you have the following installed on your system:
+
+- [Node.js](https://nodejs.org/) (v16 or later recommended)
+- npm (comes with Node.js)
+- A code editor, such as [Visual Studio Code](https://code.visualstudio.com/)
+
+---
+
+### Installation
+
+1. **Clone the Repository**  
+   Open your terminal and run the following command to clone the repository:
+   ```bash
+   git clone https://github.com/username/project_name
+   cd project_name
+   ```  
+
+2. **Install Dependencies**  
+   Install the necessary dependencies for the project:
+   ```bash
+   npm install
+   ```
+
+## Running the Project
+
+You can follow below instructions for the start the application.
+
+### Setup .env File
+
+- Create a file called `.env` in the root folder
+
+- Add these env variables to that file
+
+```
+VITE_API_URL=http://localhost:5000
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Start the React Application
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Run the following command to start the React application locally on port 5173:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+  ```bash
+  npm run dev
+  ```
+
+- Once started, open your browser and navigate to http://localhost:5173 to view the application.
+
+### Start the JSON Server
+
+- Run the following command to start the JSON Server locally on port `5000`
+
+  ```bash
+  npm run json-server
+  ```
+
+- The JSON Server will be accessible at http://localhost:5000.
+
+## Project Structure
+
+- `assets`: To manage all the assets.
+- `components`: To manage all the components.
+- `constants`: To manage all the constant data.
+- `pages`: To manage all the pages.
+- `routes`: To manage all the routes.
+- `services`: To manage all the api routes and calls.
+- `types`: To manage all the typescript types.
+- `utils`: To manage all the utility functionalities.
+
+## Available Scripts
+
+- Starts the React development server.
+  ```bash
+  npm run dev
+  ```
+- Starts the JSON Server.
+  ```bash
+  npm run json-server
+  ```
+
+## Technologies Used
+
+- React: Frontend library for building user interfaces.
+- JSON Server: A mock REST API for testing and prototyping.
+- Lucid Icons: Icon pack
+
+## Contributing
+
+- Feel free to fork the repository and submit pull requests to contribute to the project.
+
+## License
+
+- This project is licensed under the MIT License.
