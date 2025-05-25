@@ -133,7 +133,7 @@ const AddJobForm = () => {
                         <Description description="Select at least on location"/>
                     </div>
                     <div className="py-[1rem] pb-[3rem] border-b-[3px] border-b-[#CDE4C2]">
-                        <select onChange={(e) => setLocation(e.target.value)} value={location} name="lcoation" id="select" className="md:ml-[30px] mb-[5px] w-full rounded-[30px] outline-none text-[gray] text-sm border-[#DADADA] border-[2px] px-[1.5rem] py-[0.7rem] py-[10px] md:w-[300px] rounded-full">
+                        <select onChange={(e) => setLocation(e.target.value)} value={location} name="lcoation" id="select" className="appearance-none md:ml-[30px] mb-[5px] w-full rounded-[30px] outline-none text-[gray] text-sm border-[#DADADA] border-[2px] px-[1.5rem] py-[0.7rem] py-[10px] md:w-[300px] rounded-full">
                             <option>Select Location</option>
                             {
                                 countries.map((country: Country) => {
@@ -153,7 +153,7 @@ const AddJobForm = () => {
                         <Description description="Give us a brief description about the job"/>
                     </div>
                     <div className="py-[1rem] pb-[3rem]">
-                        <input onChange={(e) => setDescription(e.target.value)} value={description} className="md:ml-[30px] mb-[5px] w-full rounded-[30px] outline-none text-[gray] text-sm border-[#DADADA] border-[2px] px-[1.5rem] py-[0.7rem] md:w-[300px] rounded-full" placeholder="Enter the job description"/>
+                        <textarea onChange={(e) => setDescription(e.target.value)} value={description} className="md:ml-[2rem] mb-[5px] w-full rounded-[30px] outline-none text-[gray] text-sm border-[#DADADA] border-[2px] px-[1.5rem] py-[0.7rem] lg:w-[96%] md:w-[100%]  h-[300px] rounded-[2rem] resize-y" placeholder="Enter the job description"/>
                         {
                             errors.description && (<ValidationText text="Description is required"/>)
                         }
