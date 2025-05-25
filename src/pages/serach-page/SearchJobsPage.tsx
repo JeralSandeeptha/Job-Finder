@@ -38,7 +38,7 @@ const SearchJobsPage = () => {
         isFindJob={true}
         description="Browse, Explore new latest jobs related to your preferences!"
       />
-      <div className="px-[3rem] pl-0">
+      <div className="px-[3rem] mb-[5rem]">
         <div className="pb-[2rem]">
           {Array.isArray(searchJobsList) && searchJobsList.length > 0 && (
             <div>

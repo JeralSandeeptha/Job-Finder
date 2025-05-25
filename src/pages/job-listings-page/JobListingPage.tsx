@@ -4,10 +4,10 @@ import Navbar from "../../components/navbar/Navbar";
 import SearchBar from "../../components/search-bar/SearchBar";
 import type { Country, Job } from "../../types/interface.types";
 import getAllJobs from "../../services/getAllJobs/getAllJobs";
-import { Grid2x2, List } from "lucide-react";
+import { Grid2x2, List, MoveUp } from "lucide-react";
 import JobCard from "../../components/job-card/JobCard";
 import { countries } from "../../constants/countries.data";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const JobListingPage = () => {
   const [jobs, setJobs] = useState<Job[]>([]);
@@ -118,14 +118,14 @@ const JobListingPage = () => {
           <div>
             <div className="flex gap-10 items-center justify-end pb-[1.5rem]">
               <button
-                className="cursor-pointer flex gap-3 hover:text-[#009A4B]"
+                className={`cursor-pointer flex gap-3 text-[#009A4B]  ${isGrid ? "text-[#D7D7D7]" : "text-[#009A4B]"}`}
                 onClick={handleChangeGrid}
               >
                 <List />
                 <h5>List View</h5>
               </button>
               <button
-                className="cursor-pointer flex gap-3 hover:text-[#009A4B]"
+                className={`cursor-pointer flex gap-3 text-[#009A4B]  ${isGrid ? "text-[#009A4B]" : "text-[#D7D7D7]"}`}
                 onClick={handleChangeGrid}
               >
                 <Grid2x2 />
@@ -143,7 +143,7 @@ const JobListingPage = () => {
                 <JobCard key={job.id} job={job} isGrid={isGrid} />
               ))}
             </div>
-            {!hasMore && <p>No more jobs</p>}
+            {!hasMore && <Link to={'#'} onClick={() => window.scrollTo(0, 0)} className="bg-[#EDF8F2] px-[2rem] py-[1rem] rounded-full mt-[2rem] text-[1.2rem] text-center font-medium flex items-center justify-center gap-[1rem]"><span>You have covered all the openings !</span> <MoveUp className=""/></Link>}
           </div>
         </div>
       </div>
