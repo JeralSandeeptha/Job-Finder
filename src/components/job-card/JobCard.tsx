@@ -40,6 +40,7 @@ const JobCard = (props: JobCardProps) => {
   }
 
   return (
+    <Link to={`/job/${props.job.id}`}>
     <div key={props.job.id} className="relative flex flex-col border-1 border-[#EDEDED] rounded-[1rem] px-[2rem] py-[2.5rem]">
       <div className="flex gap-[1.5rem]">
         <img src={jobImage} alt="job-image" className="h-fit"/>
@@ -71,8 +72,8 @@ const JobCard = (props: JobCardProps) => {
       <div>
         <Bookmark className="absolute right-[2rem] top-[2.5rem] w-[25px] h-[25px]"/>
       </div>
-
     </div>
+    </Link>
   );
 };
 
