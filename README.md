@@ -10,6 +10,7 @@ This repository contains the source code for a React application that integrates
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Running the Project](#running-the-project)
+  - [Setup .env File](#setup-env-file)
   - [Start the React Application](#start-the-react-application)
   - [Start the JSON Server](#start-the-json-server)
 - [Project Structure](#project-structure)
@@ -52,6 +53,16 @@ Ensure you have the following installed on your system:
 ## Running the Project
 
 You can follow below instructions for the start the application.
+
+### Setup .env File
+
+- Create a file called `.env` in the root folder
+
+- Add these env variables to that file
+
+```
+VITE_API_URL=http://localhost:5000
+```
 
 ### Start the React Application
 
