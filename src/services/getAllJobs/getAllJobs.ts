@@ -11,7 +11,7 @@ const getAllJobs = async (props: GetAllJobsProps) => {
         // console.log(response.data.data.reverse());
 
         props.setJobs((prevJobs) => {
-            return [...prevJobs.reverse(), ...newJobs.reverse()];
+            return [...prevJobs, ...newJobs];
         });
         props.setHasMore(newJobs.length === props.limit);
         props.setLoading(false);
