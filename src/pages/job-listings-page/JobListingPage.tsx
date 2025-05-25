@@ -21,7 +21,7 @@ const JobListingPage = () => {
   const handleScroll = () => {
     if (loading || !hasMore) return;
 
-    if (window.innerHeight + window.scrollY + 100 >= document.documentElement.scrollHeight) {
+    if (window.innerHeight + window.scrollY + 700 >= document.documentElement.scrollHeight) {
       changePage();
     }
   }
