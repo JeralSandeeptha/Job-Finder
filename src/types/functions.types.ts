@@ -22,7 +22,7 @@ export type CreateNewJobProps = {
 }
 
 export type GetJobProps = {
-    jobId: number,
+    jobId: string | undefined,
     setJob: Dispatch<SetStateAction<Job>>
 }
 
