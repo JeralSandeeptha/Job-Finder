@@ -118,14 +118,14 @@ const JobListingPage = () => {
           <div>
             <div className="flex gap-10 items-center justify-end pb-[1.5rem]">
               <button
-                className={`cursor-pointer flex gap-3 text-[#009A4B]  ${isGrid ? "text-[#D7D7D7]" : "text-[#009A4B]"}`}
+                className={`cursor-pointer flex gap-3 text-[#009A4B] ${isGrid ? "text-[#D7D7D7]" : "text-[#009A4B]"}`}
                 onClick={handleChangeGrid}
               >
                 <List />
                 <h5>List View</h5>
               </button>
               <button
-                className={`cursor-pointer flex gap-3 text-[#009A4B]  ${isGrid ? "text-[#009A4B]" : "text-[#D7D7D7]"}`}
+                className={`cursor-pointer flex gap-3 text-[#009A4B] ${isGrid ? "text-[#009A4B]" : "text-[#D7D7D7]"}`}
                 onClick={handleChangeGrid}
               >
                 <Grid2x2 />
