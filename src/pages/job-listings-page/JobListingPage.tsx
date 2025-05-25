@@ -125,7 +125,7 @@ const JobListingPage = () => {
                 <h5>List View</h5>
               </button>
               <button
-                className="cursor-pointer flex gap-3 hover:text-[#009A4B]"
+                className={`cursor-pointer flex gap-3 hover:text-[#009A4B] ${isGrid ? "text-[#009A4B]" : "text-[#D7D7D7]"}`}
                 onClick={handleChangeGrid}
               >
                 <Grid2x2 />
@@ -143,7 +143,7 @@ const JobListingPage = () => {
                 <JobCard key={job.id} job={job} isGrid={isGrid} />
               ))}
             </div>
-            {!hasMore && <Link to={'#'} className="bg-[#EDF8F2] px-[2rem] py-[1rem] rounded-full mt-[2rem] text-[1.2rem] text-center font-medium flex items-center justify-center gap-[1rem]"><span>You have covered all the openings !</span> <MoveUp className=""/></Link>}
+            {!hasMore && <Link to={'#'} onClick={() => window.scrollTo(0, 0)} className="bg-[#EDF8F2] px-[2rem] py-[1rem] rounded-full mt-[2rem] text-[1.2rem] text-center font-medium flex items-center justify-center gap-[1rem]"><span>You have covered all the openings !</span> <MoveUp className=""/></Link>}
           </div>
         </div>
       </div>
