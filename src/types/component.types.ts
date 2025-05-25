@@ -35,7 +35,8 @@ export type AlertProps = {
 
 export type JobCardProps = {
     job: Job,
-    isGrid: boolean
+    isGrid: boolean,
+  
 }
 
 export type SearchBarProps = {
