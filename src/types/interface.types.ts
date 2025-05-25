@@ -17,3 +17,8 @@ export interface newJob{
     posted_date : string,
     posted_by : string
 }
+
+export interface Country{
+    id: string,
+    name: string,
+}
