@@ -107,14 +107,14 @@ const JobListingPage = () => {
           <div>
             <div className="flex gap-10 items-center justify-end pb-[1.5rem]">
               <button
-                className="cursor-pointer flex gap-3 hover:text"
+                className="cursor-pointer flex gap-3 hover:text-[#009A4B]"
                 onClick={handleChangeGrid}
               >
                 <List />
                 <h5>List View</h5>
               </button>
               <button
-                className="cursor-pointer flex gap-3"
+                className="cursor-pointer flex gap-3 hover:text-[#009A4B]"
                 onClick={handleChangeGrid}
               >
                 <Grid2x2 />
