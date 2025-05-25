@@ -1,3 +1,4 @@
+import type { Dispatch, SetStateAction } from "react"
 import type { Job } from "./interface.types"
 
 export type HeroProps = {
@@ -35,4 +36,12 @@ export type AlertProps = {
 export type JobCardProps = {
     job: Job,
     isGrid: boolean
+}
+
+export type SearchBarProps = {
+    title: string,
+    company: string,
+    setTitle: Dispatch<SetStateAction<string>>,
+    setCompany: Dispatch<SetStateAction<string>>,
+    handleSearch: ()=> void
 }
