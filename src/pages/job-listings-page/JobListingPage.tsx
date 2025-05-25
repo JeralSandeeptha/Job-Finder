@@ -4,10 +4,11 @@ import Navbar from "../../components/navbar/Navbar";
 import SearchBar from "../../components/search-bar/SearchBar";
 import type { Country, Job } from "../../types/interface.types";
 import getAllJobs from "../../services/getAllJobs/getAllJobs";
-import { Grid2x2, List } from "lucide-react";
+import { Grid2x2, List, MoveUp } from "lucide-react";
 import JobCard from "../../components/job-card/JobCard";
 import SubTitle from "../../components/sub-title/SubTitle";
 import { countries } from "../../constants/countries.data";
+import { Link } from "react-router-dom";
 
 const JobListingPage = () => {
   const [jobs, setJobs] = useState<Job[]>([]);
@@ -133,7 +134,7 @@ const JobListingPage = () => {
                 <JobCard key={job.id} job={job} isGrid={isGrid} />
               ))}
             </div>
-            {!hasMore && <p>No more jobs</p>}
+            {!hasMore && <Link to={'#'} className="bg-[#EDF8F2] px-[2rem] py-[1rem] rounded-full mt-[2rem] text-[1.2rem] text-center font-medium flex items-center justify-center gap-[1rem]"><span>You have covered all the openings !</span> <MoveUp className=""/></Link>}
           </div>
         </div>
       </div>

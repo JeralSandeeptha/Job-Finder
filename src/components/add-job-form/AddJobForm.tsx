@@ -164,7 +164,7 @@ const AddJobForm = () => {
                     </div>
                 </div>                            
             </div>
-            <div className="action-btn flex justify-end gap-9">
+            <div className="action-btn flex justify-end gap-8">
                 <button onClick={handleSubmit} className="bg-[#00773A] text-[white] text-[1.2rem] py-[0.5rem] px-[2.5rem] rounded-full hover:bg-[linear-gradient(to_left,#009A4B_1%,#35A44C_1%,#57AB4D_16%,#6EAF4E_51%,#9EB84F_76%,#E5C651_100%)] hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer">Post this job</button>
                  <Link to={'/'} className="bg-[#EDF8F2] text-[black] text-[1.2rem] py-[0.5rem] px-[2.5rem] rounded-full hover:bg-[#F8EFD0] hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer">Cancel</Link>
             </div>
