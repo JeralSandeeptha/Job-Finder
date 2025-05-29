@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import userLogin from "../../services/userLogin/userLogin";
 import Alert from "../../components/alert/Alert";
+import useAuth from "../../hooks/useAuth";
+import useLocalStorage from "../../hooks/usLocalStorage";
 
 const LoginPage = () => {
   const [email, setEmail] = useState<string>("");
@@ -10,6 +12,8 @@ const LoginPage = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [isError, setIsError] = useState<boolean>(false);
+  const { setIsLoggedIn } = useAuth();
+  const { setLocalStorageItem } = useLocalStorage();
 
   const handleLogin = async () => {
     try {
@@ -19,7 +23,9 @@ const LoginPage = () => {
             password: password,
             setIsError: setIsError,
             setIsLoading: setIsLoading,
-            setIsSuccess: setIsSuccess
+            setIsSuccess: setIsSuccess,
+            setIsLoggedIn: setIsLoggedIn,
+            setLocalStorageItem: setLocalStorageItem
         });
     } catch (error) {
         alert('Please enter valid credentails');

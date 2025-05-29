@@ -57,7 +57,9 @@ export type UserLoginProps = {
     navigate: NavigateFunction,
     setIsLoading: Dispatch<SetStateAction<boolean>>,
     setIsSuccess: Dispatch<SetStateAction<boolean>>,
-    setIsError: Dispatch<SetStateAction<boolean>>
+    setIsError: Dispatch<SetStateAction<boolean>>,
+    setIsLoggedIn: Dispatch<SetStateAction<boolean>>,
+    setLocalStorageItem: (itemName: string, itemData: unknown) => void,
 }
 
 export type RegisterProps = {

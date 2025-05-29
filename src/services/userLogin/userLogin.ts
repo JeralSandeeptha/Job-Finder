@@ -13,6 +13,11 @@ const userLogin = async (props: UserLoginProps) => {
         });
         console.log(data);
         props.setIsSuccess(true);
+        props.setIsLoggedIn(true);
+        props.setLocalStorageItem('isLoggedIn', true);
+        if(data) {
+            props.setLocalStorageItem('role', data.user.role);
+        }
         setTimeout(() => {
             props.setIsLoading(false);
             props.setIsSuccess(false);
