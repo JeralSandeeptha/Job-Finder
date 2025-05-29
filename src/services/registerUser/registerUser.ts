@@ -34,7 +34,7 @@ const registerUser = async (props: RegisterProps) => {
       props.setIsSuccess(false);
     }, 3000);
     setTimeout(() => {
-      props.navigate("/");
+      props.navigate("/login");
     }, 4000);
   } catch (error) {
     props.setIsError(true);
