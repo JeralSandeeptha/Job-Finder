@@ -50,3 +50,12 @@ export type SearchJobsProps = {
 export type GetUserProps = {
     email: string
 }
+
+export type UserLoginProps = {
+    email: string,
+    password: string,
+    navigate: NavigateFunction,
+    setIsLoading: Dispatch<SetStateAction<boolean>>,
+    setIsSuccess: Dispatch<SetStateAction<boolean>>,
+    setIsError: Dispatch<SetStateAction<boolean>>
+}
