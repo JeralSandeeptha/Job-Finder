@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { roles } from "../../constants/role.constants";
-import { collection, addDoc, query, where, getDocs } from "firebase/firestore"; 
+import { collection, addDoc } from "firebase/firestore"; 
 import { auth, db } from "../../config/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import getUser from "../../services/getUser/getUser";
 
 const RegisterPage = () => {
 
@@ -15,29 +16,12 @@ const RegisterPage = () => {
 
     const usersCollection = collection(db, "users");
 
-    const getUser = async () => {
-        try {
-            const q = query(usersCollection, where("email", "==", email));
-            const snapshot = await getDocs(q); 
-            if (snapshot.empty) {
-                return false;
-            }
-
-            const user = snapshot.docs[0].data();
-            const data = {
-                user: user,
-                hasUser: true
-            }
-            return data;
-        } catch (error) {
-            console.log(error);
-        } 
-    }
-
     const handleRegister = async () => {
         const newUser = { email, password, role };
         try {
-            const data = await getUser();
+            const data = await getUser({
+                email
+            });
             console.log(data);
             if (data && data.hasUser) {
                 alert('User Already Exist');

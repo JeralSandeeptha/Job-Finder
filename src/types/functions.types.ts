@@ -46,3 +46,7 @@ export type SearchJobsProps = {
     location?: string,
     title?: string,
 }
+
+export type GetUserProps = {
+    email: string
+}
