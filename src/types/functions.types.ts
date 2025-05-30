@@ -46,3 +46,31 @@ export type SearchJobsProps = {
     location?: string,
     title?: string,
 }
+
+export type GetUserProps = {
+    email: string
+}
+
+export type UserLoginProps = {
+    email: string,
+    password: string,
+    navigate: NavigateFunction,
+    setIsLoading: Dispatch<SetStateAction<boolean>>,
+    setIsSuccess: Dispatch<SetStateAction<boolean>>,
+    setIsError: Dispatch<SetStateAction<boolean>>,
+    setIsLoggedIn: Dispatch<SetStateAction<boolean>>,
+    setLocalStorageItem: (itemName: string, itemData: unknown) => void,
+}
+
+export type RegisterProps = {
+    email: string,
+    password: string,
+    role: string,
+    navigate: NavigateFunction,
+    setIsLoading: Dispatch<SetStateAction<boolean>>,
+    setIsSuccess: Dispatch<SetStateAction<boolean>>,
+    setIsError: Dispatch<SetStateAction<boolean>>,
+    setPassword: Dispatch<SetStateAction<string>>,
+    setRole: Dispatch<SetStateAction<string>>,
+    setEmail: Dispatch<SetStateAction<string>>,
+}

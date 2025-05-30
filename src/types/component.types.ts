@@ -1,5 +1,6 @@
-import type { Dispatch, SetStateAction } from "react"
+import type { Dispatch, JSX, SetStateAction } from "react"
 import type { Job } from "./interface.types"
+import type React from "react"
 
 export type HeroProps = {
     isHero?: boolean,
@@ -45,4 +46,12 @@ export type SearchBarProps = {
     setTitle: Dispatch<SetStateAction<string>>,
     setCompany: Dispatch<SetStateAction<string>>,
     handleSearch: ()=> void
+}
+
+export type PrivateRouteProps = {
+    page: React.ReactNode
+}
+
+export type PublicRouteProps = {
+    page: () => JSX.Element
 }

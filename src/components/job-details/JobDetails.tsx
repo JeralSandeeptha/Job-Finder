@@ -4,6 +4,7 @@ import getJob from "../../services/getJob/getJob";
 import type { Job } from "../../types/interface.types";
 import { Calendar, Circle, MapPin, MoveLeft } from "lucide-react";
 import jobImage from '../../assets/logos/client logo.svg';
+import useLocalStorage from "../../hooks/usLocalStorage";
 
 const JobDetails = () => {
 
@@ -18,6 +19,7 @@ const JobDetails = () => {
         id: '',
         company: ''
     });
+    const { getLocalStorageItem } = useLocalStorage();
 
     const getDetails = () => {
         getJob({
@@ -57,9 +59,13 @@ const JobDetails = () => {
                     </div>
                      
                 </div>
-                <div className="pt-[2.5rem]">
-                    <button className="text-[black] bg-[#F8EFD0] rounded-full w-max py-[0.5rem] px-[2.5rem] text-[1.2rem] font-medium hover:bg-[#E5C651] hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer">Apply Now</button>
-                </div>
+                {
+                    getLocalStorageItem('role') === 'User' && (
+                        <div className="pt-[2.5rem]">
+                            <button className="text-[black] bg-[#F8EFD0] rounded-full w-max py-[0.5rem] px-[2.5rem] text-[1.2rem] font-medium hover:bg-[#E5C651] hover:scale-105 transition-all duration-500 ease-in-out cursor-pointer">Apply Now</button>
+                        </div>
+                    )
+                }
                 
             </div>
 
