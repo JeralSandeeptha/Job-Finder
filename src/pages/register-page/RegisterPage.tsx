@@ -81,7 +81,7 @@ const RegisterPage = () => {
               name="password"
               value={password}
               className="w-full border-1 px-[10px] py-[10px] rounded border-gray-300 outline-none"
-              placeholder="Enter your email password"
+              placeholder="Enter your password"
               onChange={(e) => setPassword(e.target.value)}
             />
             <select

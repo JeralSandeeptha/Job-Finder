@@ -76,7 +76,7 @@ const LoginPage = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="w-full border-1 px-[10px] py-[10px] rounded border-gray-300 outline-none"
-              placeholder="Enter your email address"
+              placeholder="Enter your password"
             />
           </div>
           <div className="w-full">
