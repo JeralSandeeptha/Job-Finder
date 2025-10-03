@@ -2,7 +2,7 @@
 
 This repository contains the source code for a React application that integrates with a JSON Server for managing data. The project is designed to run locally, providing a simple frontend and backend setup for demonstration purposes.
 
----
+--- 
 
 ## Table of Contents
 
